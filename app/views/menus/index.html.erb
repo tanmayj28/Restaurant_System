@@ -1,0 +1,20 @@
+<h1>Menu</h1>
+<button><%= link_to 'Menus', controller: 'menus'%></button>
+<button><%= link_to 'New Menu', new_menu_path %></button>
+<table>
+  <tr>
+	<th>Dish Name</th>
+	<th>Dish Description</th>
+	<th>Dish Price</th>
+  </tr>
+  <% @menus.each do |menu| %>
+	<tr>
+	  <td><%= menu.dish_name %></td>
+	  <td><%= menu.dish_description %></td>
+	  <td><%= menu.dish_price %></td>
+	  <td><button><%= link_to 'Order This', menu_path(menu) %></button></td>
+	  <td><button><%= link_to 'Edit', edit_menu_path(menu) %></button></td>
+	  <td><button><%= link_to 'Destroy', menu_path(menu), method: :delete, data: { confirm: 'Are you Sure?' } %></button></td>
+	</tr>
+  <% end %>
+</table>

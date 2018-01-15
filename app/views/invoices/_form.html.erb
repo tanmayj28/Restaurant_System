@@ -1,0 +1,17 @@
+<%= form_for Invoice.new do |form| %> 
+  <p>
+    <%= form.label :dish_name %><br>
+    <%= form.text_field :dish_name %>
+  </p> 
+  <p>
+    <%= form.label :dish_price %><br>
+    <%= form.text_area :dish_price %>
+  </p> 
+  <p>
+    <%= form.label :total %><br>
+    <%= form.text_area :total %>
+  </p> 
+  <p>
+    <%= form.submit %>
+  </p> 
+<% end %>

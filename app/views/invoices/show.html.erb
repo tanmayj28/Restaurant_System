@@ -1,0 +1,14 @@
+<p>
+  <strong>Dish Name:</strong>
+  <%= @invoice.dish_name %>
+</p>
+<p>
+  <strong>Dish Price</strong>
+  <%= @invoice.dish_price %>
+</p>
+<p>
+  <strong>Total</strong>
+  <%= @invoice.total %>
+</p>
+<button><%= link_to 'Back to invoices', invoices_path %></button>
+<button><%= link_to 'Back to menu', menus_path %></button>

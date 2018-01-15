@@ -1,0 +1,17 @@
+<p>
+  <strong>Dish Name:</strong>
+  <%= @menu.dish_name %>
+</p>
+<p>
+  <strong>Dish Description</strong>
+  <%= @menu.dish_description %>
+</p>
+<p>
+  <strong>Dish Price</strong>
+  <%= @menu.dish_price %>
+</p>
+<p>
+  <%= render 'invoices/form' %>
+</p>
+<%= link_to 'Order More', menus_path %>
+<button><%= link_to 'Back', menus_path %></button>

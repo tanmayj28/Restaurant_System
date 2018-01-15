@@ -1,0 +1,22 @@
+<h1>Customer</h1>
+<button><%= link_to 'Customer', controller: 'customers'%></button>
+<button><%= link_to 'New Customer', new_customer_path %></button>
+<table>
+  <tr>
+	<th>Name</th>
+	<th>Phone</th>
+	<th>Address</th>
+	<th>People</th>
+  </tr>
+  <% @customers.each do |customer| %>
+	<tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.phone %></td>
+      <td><%= customer.address %></td>
+      <td><%= customer.no_of_people %></td>
+      <td><button><%= link_to 'Show', customer_path(customer) %></button></td>
+      <td><button><%= link_to 'Edit', edit_customer_path(customer) %></button></td>
+      <td><button><%= link_to 'Destroy', customer_path(customer), method: :delete, data: { confirm: 'Are you Sure?' } %></button></td>
+    </tr>
+  <% end %>
+</table>

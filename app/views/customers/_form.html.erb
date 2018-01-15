@@ -1,0 +1,23 @@
+<%= form_for Customer.new, local: true do |form| %>   
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p> 
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p> 
+  <p>
+    <%= form.label :phone %><br>
+    <%= form.text_area :phone %>
+  </p> 
+  <p>
+    <%= form.label :no_of_people %><br>
+    <%= form.text_area :no_of_people %>
+  </p>
+  <%= form.hidden_field :restaurant_system_id, :value=>@restaurant_system.id %> 
+  <p>
+    <%= form.submit %>
+    <button><%= link_to 'Go to menu', menus_path %></button>
+  </p> 
+<% end %>

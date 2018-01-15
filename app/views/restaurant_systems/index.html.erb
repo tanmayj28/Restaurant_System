@@ -1,0 +1,20 @@
+<h1>Restaurant System</h1>
+<button><%= link_to 'Restaurants', controller: 'restaurant_systems'%></button>
+<button><%= link_to 'New Restaurant', new_restaurant_system_path %></button>
+<table>
+  <tr>
+	<th>Restaurant Name</th>
+	<th>Phone</th>
+	<th>Address</th>
+  </tr>
+  <% @restaurant_systems.each do |restaurant_system| %>
+	<tr>
+	  <td><%= restaurant_system.name %></td>
+	  <td><%= restaurant_system.phone %></td>
+	  <td><%= restaurant_system.address%></td>
+	  <td><button><%= link_to 'Make Booking', restaurant_system_path(restaurant_system) %></button></td>
+	  <td><button><%= link_to 'Edit', edit_restaurant_system_path(restaurant_system) %></button></td>
+	  <td><button><%= link_to 'Destroy', restaurant_system_path(restaurant_system), method: :delete, data: { confirm: 'Are you Sure?' } %></button></td>
+	</tr>
+  <% end %>
+</table> 

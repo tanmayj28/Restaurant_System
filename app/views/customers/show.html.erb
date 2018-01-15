@@ -1,0 +1,20 @@
+<p>
+  <strong>Customer Name:</strong>
+  <%= @customer.name %>
+</p>
+<p>
+  <strong>Phone</strong>
+  <%= @customer.phone %>
+</p>
+<p>
+  <strong>Address</strong>
+  <%= @customer.address %>
+</p>
+<p>
+  <strong>No. of people</strong>
+  <%= @customer.no_of_people %>
+</p>
+<p>
+	<strong>Go to Menu</strong>
+</p>
+<button><%= link_to 'Back', customers_path %></button>

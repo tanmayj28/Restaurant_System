@@ -1,0 +1,23 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: restaurant_development
+  pool: 5
+  username: postgres
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: restaurant_test
+  pool: 5
+  username: postgres
+
+  production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: restaurant_production
+  pool: 5
+  username: postgres

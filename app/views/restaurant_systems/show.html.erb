@@ -1,0 +1,16 @@
+<p>
+  <strong>Restaurant Name:</strong>
+  <%= @restaurant_system.name %>
+</p>
+<p>
+  <strong>Phone</strong>
+  <%= @restaurant_system.phone %>
+</p>
+<p>
+  <strong>Address</strong>
+  <%= @restaurant_system.address %>
+</p>
+<h2>Customers</h2>
+<%= render 'customers/form' %>
+<button><%= link_to 'Edit', edit_restaurant_system_path(@restaurant_system) %> </button>|
+<button><%= link_to 'Back', restaurant_systems_path %></button>

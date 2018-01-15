@@ -1,0 +1,20 @@
+<h1>Invoices</h1>
+<button><%= link_to 'Invoices', controller: 'invoices'%></button>
+<button><%= link_to 'New Invoices', new_invoice_path %></button>
+<table>
+  <tr>
+	<th>Dish Name</th>
+	<th>Dish Price</th>
+	<th>Total</th>
+  </tr>
+  <% @invoices.each do |invoice| %>
+	<tr>
+	  <td><%= invoice.dish_name %></td>
+	  <td><%= invoice.dish_price %></td>
+	  <td><%= invoice.total %></td>
+	  <td><button><%= link_to 'Show', invoice_path(invoice) %></button></td>
+	  <td><button><%= link_to 'Edit', edit_invoice_path(invoice) %></button></td>
+	  <td><button><%= link_to 'Destroy', invoice_path(invoice), method: :delete, data: { confirm: 'Are you Sure?' } %></button></td>
+	</tr>
+  <% end %>
+</table>
